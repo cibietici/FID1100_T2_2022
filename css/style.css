@@ -1,0 +1,22 @@
+body {
+    background-color: #ff00ff;
+}
+
+header {
+    background-color: aqua;
+}
+
+p {
+    background-color: blue;
+}
+
+.first-paragraph {
+    background-color:gold;
+}
+
+#second-paragraph {
+    background-color: darkred;
+    color: #ffffff;
+    width: 600px;
+    height: 400px;
+}
