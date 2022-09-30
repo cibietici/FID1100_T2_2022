@@ -4,6 +4,7 @@ body {
 
 header {
     background-color: aqua;
+    padding: 20px;
 }
 
 p {
@@ -18,5 +19,18 @@ p {
     background-color: darkred;
     color: #ffffff;
     width: 600px;
-    height: 400px;
+    padding: 20px 10px 100px 60px;
+    margin: 0 auto 0 auto;
+}
+
+.main-picture {
+    width: 400px;
+    /*margin: 0 auto 0 auto;*/
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+}
+.image-1 {
+    width: 100%;
 }
