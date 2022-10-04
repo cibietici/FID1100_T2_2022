@@ -1,14 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Paprika&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Peralta&display=swap');
 body {
     background-color: #ff00ff;
+    font-family: 'Peralta', cursive; /* dette setter et spesifikk font-face til side */
+    font-weight: 800;
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
 }
 
 header {
     background-color: aqua;
     padding: 20px;
+    /*position: fixed;
+    width: 100%;
+    display: block;
+    top: 0;
+    z-index: 5;*/
+}
+
+.centered {
+    width: 80%;
+    margin: 0 auto 0 auto;
+}
+
+.box1 {
+    width: 33%;
+    height: 80px;
+    background-color: darkgreen;
+    display: inline-block;
+}
+
+.box2 {
+    width: 33%;
+    height: 80px;
+    background-color: darkseagreen;
+    display: inline-block;
+}
+
+.box3 {
+    width: 33%;
+    height: 80px;
+    background-color: burlywood;
+    display: inline-block;
 }
 
 p {
     background-color: blue;
+    color: #ffffff;
+}
+
+.sticky-box {
+    /*display: block;
+    position: fixed;
+    top: 124px;*/
 }
 
 .first-paragraph {
@@ -33,4 +78,22 @@ p {
 }
 .image-1 {
     width: 100%;
+}
+
+.my-box {
+    width: 100%;
+    height: 400px;
+    background-color: chartreuse;
+    position: relative;
+}
+
+.inside-box {
+    background-color: darkcyan;
+    color: #ffffff;
+    width: 50%;
+    position: absolute;
+    bottom: 60px;
+    left: 40px;
+    font-size: 32px;
+    font-family: 'Peralta', cursive;
 }
