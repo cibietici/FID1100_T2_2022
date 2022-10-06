@@ -1,22 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Paprika&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Peralta&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Paprika&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Peralta&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600&display=swap');
+
 body {
     background-color: #ff00ff;
-    font-family: 'Peralta', cursive; /* dette setter et spesifikk font-face til side */
-    font-weight: 800;
-    font-style: italic;
+    /* font-family: 'Peralta', cursive;  dette setter et spesifikk font-face til side */
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
-    text-align: center;
 }
 
 header {
-    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 120px;
+    align-items: center;
+    background-color: aliceblue;
     padding: 20px;
     /*position: fixed;
     width: 100%;
     display: block;
     top: 0;
     z-index: 5;*/
+}
+
+@media screen and (min-width: 700px) {
+    header {
+        justify-content: space-between;
+    }
+}
+
+header ul {
+    display: none;
+}
+
+@media screen and (min-width: 700px) {
+    header ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+}
+
+.hamburger {
+    display: block;
+}
+
+@media screen and (min-width: 700px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    header {
+        display: block;
+        background-color: aliceblue;
+    }
 }
 
 .centered {
@@ -95,5 +135,34 @@ p {
     bottom: 60px;
     left: 40px;
     font-size: 32px;
-    font-family: 'Peralta', cursive;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.box-model {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    margin: 30px auto;
+    background-color: deepskyblue;
+    border: 5px solid #000;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.flex-item {
+    height: 100px;
+    width: 200px;
+    background-color: #ffffff;
+}
+
+.flex-item-big {
+    height: 100px;
+    width: 200px;
+    background-color: #ffffff;
 }

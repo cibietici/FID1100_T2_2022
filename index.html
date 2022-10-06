@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <title>My first page</title>
     <meta name="description" content="This page is about me">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
 
-    <header>
+    <header class="header">
        <img src="./assets/logo-xxl.svg" width="150">   
+      <nav>
+        <ul>
+          <li>home</li>
+          <li>about</li>
+          <li>products</li>
+          <li>contact</li>
+        </ul>
+      </nav>
+      <img src="./assets/hamburger.svg" class="hamburger">
     </header>
 
     <section class="centered">
@@ -17,13 +27,36 @@
       <div class="box2">2</div>
       <div class="box3">3</div>
     </section>
+
+    <section class="flex-container">
+      <div class="flex-item">
+        1
+      </div>
+      <div class="flex-item">
+        2
+      </div>
+      <div class="flex-item-big">
+        3
+      </div>
+      <div class="flex-item-big">
+        4
+      </div>
+      <div class="flex-item-big">
+        5
+      </div>
+    </section>
     
 
     <div class="my-box">
-      <div class="inside-box">Box</div>
+      <div class="inside-box">Box 22</div>
     </div>
     <main>
 
+      <section class="box-model">
+        Section container
+      </section>
+
+      <!--  
       <h1>Title</h1>
       <section class="sticky-box">
         <article>
@@ -65,6 +98,7 @@
         </p>
       </article>
       </section>
+      -->
     </main>
     <footer>
       footer
