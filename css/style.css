@@ -2,21 +2,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Peralta&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600&display=swap');
 
+html {
+    font-size: 14px; /* 1rem verdi i mobil versjon */
+}
+
+@media screen and (min-width: 700px) {
+    html {
+        font-size: 20px; /* 1rem verdi i desktop versjon */
+    }
+}
+
 body {
     background-color: #ff00ff;
     /* font-family: 'Peralta', cursive;  dette setter et spesifikk font-face til side */
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
 }
 
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 120px;
+    height: 6rem;
     align-items: center;
     background-color: aliceblue;
-    padding: 20px;
+    padding: 1rem;
     /*position: fixed;
     width: 100%;
     display: block;
@@ -24,9 +33,19 @@ header {
     z-index: 5;*/
 }
 
-@media screen and (min-width: 700px) {
+@media print {
     header {
-        justify-content: space-between;
+        display: none;
+    }
+}
+
+header nav {
+    display: none;
+}
+
+@media screen and (min-width: 700px) {
+    header nav{
+        display: block;
     }
 }
 
@@ -34,11 +53,24 @@ header ul {
     display: none;
 }
 
+header nav ul li {
+    color: darkmagenta;
+    transition-property: all;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.2s;
+}
+
+header nav ul li:hover {
+    color: #ff00ff;
+    text-decoration: underline;
+}
+
 @media screen and (min-width: 700px) {
     header ul {
         list-style: none;
         display: flex;
-        gap: 20px;
+        gap: 1rem;
     }
 }
 
@@ -66,21 +98,21 @@ header ul {
 
 .box1 {
     width: 33%;
-    height: 80px;
+    height: 4rem;
     background-color: darkgreen;
     display: inline-block;
 }
 
 .box2 {
     width: 33%;
-    height: 80px;
+    height: 4rem;
     background-color: darkseagreen;
     display: inline-block;
 }
 
 .box3 {
     width: 33%;
-    height: 80px;
+    height: 4rem;
     background-color: burlywood;
     display: inline-block;
 }
@@ -103,13 +135,13 @@ p {
 #second-paragraph {
     background-color: darkred;
     color: #ffffff;
-    width: 600px;
-    padding: 20px 10px 100px 60px;
+    width: 30rem;
+    padding: 1rem 0.5rem 5rem 3rem;
     margin: 0 auto 0 auto;
 }
 
 .main-picture {
-    width: 400px;
+    width: 20rem;
     /*margin: 0 auto 0 auto;*/
     margin-top: 0;
     margin-right: auto;
@@ -122,7 +154,7 @@ p {
 
 .my-box {
     width: 100%;
-    height: 400px;
+    height: 20rem;
     background-color: chartreuse;
     position: relative;
 }
@@ -132,19 +164,55 @@ p {
     color: #ffffff;
     width: 50%;
     position: absolute;
-    bottom: 60px;
-    left: 40px;
-    font-size: 32px;
+    bottom: 6rem;
+    left: 2rem;
+    font-size: 2.4rem;
     font-family: 'Montserrat', sans-serif;
+    animation-name: movein;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes movein {
+    from {
+        transform: translate(-600px);
+    }
+
+    80% {
+        transform: translate(200px);
+    }
+
+    to {
+        transform: translate(0px);
+    }
+}
+
+.inside-box button {
+    font-size: 1.2rem;
+    background-color: blanchedalmond;
+    color: #000000;
+    padding: 0.5rem 1.2rem;
+    border-radius: 1rem;
+    border: none;
+    margin: 1rem;
+    /* transition-property: all;
+    transition-duration: 1s; */
+    transition: all 0.6s ease-in-out;
+    transition-delay: 0.2s;
+}
+
+.inside-box button:hover {
+    background-color: brown;
+    color: #ffffff;
 }
 
 .box-model {
-    width: 200px;
-    height: 200px;
-    padding: 10px;
-    margin: 30px auto;
+    width: 40rem;
+    height: 10rem;
+    padding: 0.5rem;
+    margin: 1.5rem auto;
     background-color: deepskyblue;
-    border: 5px solid #000;
+    border: 0.25rem solid #000;
 }
 
 .flex-container {
@@ -152,17 +220,37 @@ p {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 0.5rem;
 }
 
 .flex-item {
-    height: 100px;
-    width: 200px;
+    height: 5rem;
+    width: 10rem;
     background-color: #ffffff;
 }
 
 .flex-item-big {
-    height: 100px;
-    width: 200px;
+    height: 5rem;
+    width: 10rem;
     background-color: #ffffff;
+}
+
+footer {
+    background-color: blue;
+    color: #ffffff;
+}
+
+.footer-nav {
+    display: block;
+}
+
+@media screen and (min-width: 700px){
+    .footer-nav {
+        display: none;
+    }
+}
+
+.footer-nav ul {
+    display: flex;
+    gap: 2rem;
 }
